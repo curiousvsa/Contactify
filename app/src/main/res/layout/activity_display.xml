@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_blue"
+    tools:context=".DisplayActivity">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_userPic"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:paddingTop="20dp"
+        android:src="@color/cardview_shadow_end_color"
+        app:layout_constraintEnd_toEndOf="@+id/divider"
+        app:layout_constraintStart_toStartOf="@+id/divider"
+        app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="1dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:id="@+id/tv_userName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginEnd="10dp"
+                    android:ellipsize="end"
+                    android:textAllCaps="true"
+                    android:text="@string/st_name"
+                    android:textColor="@android:color/black"
+                    android:textSize="23sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/tv_userEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="@string/st_user_id"
+                    android:textColor="@color/design_default_color_primary_variant"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/getInTouch"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginEnd="10dp"
+                    android:ellipsize="end"
+                    android:drawableEnd="@drawable/icon_email_24"
+                    android:text="@string/st_get_in_touch"
+                    android:textColor="@android:color/black"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

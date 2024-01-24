@@ -12,7 +12,7 @@ import de.hdodenhof.circleimageview.CircleImageView
 
 class DisplayActivity : AppCompatActivity() {
 
-    private lateinit var selectedUserData:Data
+    private lateinit var selectedUserData: Data
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_display)

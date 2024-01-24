@@ -16,7 +16,8 @@ import com.example.contactify.data.Data
 import com.squareup.picasso.Picasso
 
 
-class UsersListAdapter(val activity: Activity): RecyclerView.Adapter<UsersListAdapter.MyViewHolder>() {
+class UsersListAdapter(val activity: Activity) :
+    RecyclerView.Adapter<UsersListAdapter.MyViewHolder>() {
 
     private var UsersList: ArrayList<Data>? = null
 
@@ -29,7 +30,8 @@ class UsersListAdapter(val activity: Activity): RecyclerView.Adapter<UsersListAd
         parent: ViewGroup,
         viewType: Int
     ): MyViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.user_list_item, parent, false)
+        val view =
+            LayoutInflater.from(parent.context).inflate(R.layout.user_list_item, parent, false)
         return MyViewHolder(view)
     }
 
@@ -38,11 +40,11 @@ class UsersListAdapter(val activity: Activity): RecyclerView.Adapter<UsersListAd
     }
 
     override fun getItemCount(): Int {
-        if(UsersList == null)return 0
+        if (UsersList == null) return 0
         else return UsersList?.size!!
     }
 
-    class MyViewHolder(view : View): RecyclerView.ViewHolder(view){
+    class MyViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
         val tvName = view.findViewById<TextView>(R.id.tv_name)
         val userId = view.findViewById<TextView>(R.id.tv_userId)
@@ -53,17 +55,17 @@ class UsersListAdapter(val activity: Activity): RecyclerView.Adapter<UsersListAd
         fun bind(data: Data, activity: Activity) {
             data.let {
                 val userName = "${data.first_name} ${data.last_name}"
-                tvName.text =  userName
-                userId.text =  data.email.toString()
+                tvName.text = userName
+                userId.text = data.email.toString()
 
                 Picasso.get()
                     .load(data.avatar)
                     .into(displayPic)
 
                 outerContainer.setOnClickListener {
-                    Log.d("POSITION",data.toString())
+                    Log.d("POSITION", data.toString())
                     val displayActivityIntent = Intent(activity, DisplayActivity::class.java)
-                    displayActivityIntent.putExtra("userData",data)
+                    displayActivityIntent.putExtra("userData", data)
                     activity.startActivity(displayActivityIntent)
                 }
             }

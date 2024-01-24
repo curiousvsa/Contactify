@@ -32,8 +32,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:layout_marginBottom="32dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -52,19 +52,20 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"
                     android:id="@+id/tv_userName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="14dp"
+                    android:layout_marginTop="5dp"
                     android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="5dp"
                     android:ellipsize="end"
-                    android:textAllCaps="true"
                     android:text="@string/st_name"
+                    android:textAllCaps="true"
                     android:textColor="@android:color/black"
                     android:textSize="23sp"
                     android:textStyle="bold" />
+
                 <TextView
                     android:id="@+id/tv_userEmail"
                     android:layout_width="match_parent"
@@ -96,14 +97,14 @@
 
                 <TextView
                     android:id="@+id/getInTouch"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginTop="2dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="14dp"
+                    android:layout_marginTop="2dp"
                     android:layout_marginEnd="10dp"
-                    android:ellipsize="end"
+                    android:layout_marginBottom="5dp"
                     android:drawableEnd="@drawable/icon_email_24"
+                    android:ellipsize="end"
                     android:text="@string/st_get_in_touch"
                     android:textColor="@android:color/black"
                     android:textSize="22sp"

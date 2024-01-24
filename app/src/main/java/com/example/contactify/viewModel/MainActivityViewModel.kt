@@ -9,7 +9,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class MainActivityViewModel: ViewModel() {
+class MainActivityViewModel : ViewModel() {
 
     var liveDataList: MutableLiveData<UsersModel> = MutableLiveData()
 
@@ -19,8 +19,8 @@ class MainActivityViewModel: ViewModel() {
 
     fun makeAPICall() {
         val retroInstance = RetroInstance.getRetroInstance()
-        val retroService  = retroInstance.create(RetroServiceInterface::class.java)
-        val call  = retroService.getUsersList()
+        val retroService = retroInstance.create(RetroServiceInterface::class.java)
+        val call = retroService.getUsersList()
         call.enqueue(object : Callback<UsersModel> {
             override fun onFailure(call: Call<UsersModel>, t: Throwable) {
                 liveDataList.postValue(null)
